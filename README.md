@@ -12,7 +12,7 @@ Django<br/>
 <br/><br/>
 日本語版<br/>
 このアプリはDjangoを用いてフロントエンドとバックエンドの通信を簡易的に理解するために作成しました。<br/>
-このアプリを作るにあたってサプーさん（http://www.youtube.com/@pythonvtuber9917）のDjango入門の動画を参考にさせていただいた。（動画リンク：https://www.youtube.com/watch?v=r9QUdzVGHJU）<br/>
+このアプリを作るにあたってサプーさん (http://www.youtube.com/@pythonvtuber9917) のDjango入門の動画を参考にさせていただいた。(動画リンク：https://www.youtube.com/watch?v=r9QUdzVGHJU)<br/>
 <br/>
 サプーさんの日記アプリをベースにQiitaのようにいろいろな人が投稿、閲覧できるようなサイトを目指すことにした。<br/>
 <br/>
