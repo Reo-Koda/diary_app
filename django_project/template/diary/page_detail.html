@@ -2,13 +2,12 @@
 {% block body %}
 
 <h2>{{ page.title }}</h2>
-<div>{{ page.page_date }}</div>
-<div>{{ page.body | linebreaksbr }}</div>
+<div class="detail_text">{{ page.body | linebreaksbr }}</div>
 {% if page.picture %}
     <img src="{{ page.picture.url }}" alt="画像を表示できません"/>
 {% endif %}
-<br>
-<a href="{% url 'diary:page_update' page.id %}">編集</a>
-<a href="{% url 'diary:page_delete' page.id %}">削除</a>
+<div class="list_datetime">更新日時:{{ page.updated_at }}/作成日時:{{ page.created_at }}</div>
+<a href="{% url 'diary:page_update' page.id %}" class="blue_button">Modify</a>
+<a href="{% url 'diary:page_delete' page.id %}" class="blue_button">Delete</a>
 
 {% endblock %}

@@ -9,10 +9,6 @@
     </head>
     <body>
         <h1><a href="{% url 'diary:index' %}">WithRice 活動記録</a></h1>
-        <!-- <form action="{% url 'accounts:logout' %}" method="post">
-            {% csrf_token %}
-            <button type="submit">ログアウト</button>
-        </form> -->
         {% block body %}
         {% endblock %}
     </body>

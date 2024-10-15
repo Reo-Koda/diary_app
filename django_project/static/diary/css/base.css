@@ -1,3 +1,266 @@
+html, div, span, object, iframe,
+h3, h4, h5, h6, blockquote, pre,
+abbr, address, cite, code,
+del, dfn, em, img, ins, kbd, q, samp,
+small, strong, sub, sup, var,
+b, i,
+dl, dt, dd, ol, ul,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section, summary,
+time, mark, audio, video {
+  margin:0;
+  padding:0;
+  border:0;
+  outline:0;
+  font-size:100%;
+  vertical-align:baseline;
+  background:transparent;
+}
+
+article,aside,details,figcaption,figure,
+footer,header,hgroup,menu,nav,section {
+  display:block;
+}
+
+nav ul {
+  list-style:none;
+}
+
+blockquote, q {
+  quotes:none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content:'';
+  content:none;
+}
+
+/* change colours to suit your needs */
+ins {
+  background-color:#ff9;
+  color:#000;
+  text-decoration:none;
+}
+
+/* change colours to suit your needs */
+mark {
+  background-color:#ff9;
+  color:#000;
+  font-style:italic;
+   font-weight:bold;
+}
+
+del {
+  text-decoration: line-through;
+}
+
+abbr[title], dfn[title] {
+  border-bottom:1px dotted;
+  cursor:help;
+}
+
+table {
+  border-collapse:collapse;
+  border-spacing:0;
+}
+
+/* change border colour to suit your needs */
+hr {
+  display:block;
+  height:1px;
+  border:0;
+  border-top:1px solid #cccccc;
+  margin:1em 0;
+  padding:0;
+}
+
+input, select {
+  vertical-align:middle;
+}
+
+/* 以下よりCSS設定 */
+
 body {
+    margin: 0 auto;
+    padding:0;
+    border:0;
+    outline:0;
+    font-size:100%;
+    vertical-align:baseline;
+    background:transparent;
+    line-height:1;
+    width: 768px;
+    /* border: 2px solid #000000; */
+}
+
+h1 {
+    margin: 50px 0 0;
+    padding:0;
+    border:0;
+    outline:0;
+    font-size: 50px;
+    vertical-align:baseline;
+    background:transparent;
     text-align: center;
+}
+
+h2 {
+    margin: 10px 0 20px;
+    padding-left: 1rem;
+    border:0;
+    outline:0;
+    font-size:36px;
+    vertical-align:baseline;
+    background:transparent;
+    border-bottom: 2px solid #000000;
+}
+
+p {
+    margin: 2px 0 0;
+    padding:0;
+    border:0;
+    outline:0;
+    font-size:100%;
+    vertical-align:baseline;
+    background:transparent;
+}
+
+a {
+    margin:0;
+    padding:0;
+    font-size:100%;
+    vertical-align:baseline;
+    background:transparent;
+    text-decoration:none;
+    color: #000;
+}
+
+li {
+    margin:0;
+    padding:0;
+    border:0;
+    outline:0;
+    font-size:100%;
+    vertical-align:baseline;
+    background:transparent;
+    list-style:none;
+}
+
+.clock_text {
+    font-size: 18px;
+    font-weight: 500;
+    text-align: center;
+}
+
+.icon_field {
+    display: flex;
+    width: 60%;
+    margin: 0 auto;
+    justify-content:space-around;
+}
+
+.icon_box {
+    width: 150px;
+    border: 4px solid #000000;
+    border-radius: 15px;
+    text-align: center;
+}
+
+.index_icon {
+    width: 128px;
+    height: auto;
+}
+
+.icon_text {
+    font-size: 18px;
+    font-weight: 500;
+}
+
+/* ログイン・ログアウトボタン */
+.blue_button {
+    border: none;
+    background: #eee;
+    border-radius: 9999px;
+    position: relative;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 10px auto;
+    max-width: 250px;
+    min-width: 150px;
+    padding: 10px 25px;
+    font-family: "Noto Sans Japanese";
+    color: #333333;
+    line-height: 1.8;
+    text-decoration: none;
+    transition: 0.3s ease-in-out;
+    font-weight: 900;
+    font-size: 16px;
+}
+.blue_button:hover {
+    background: #333333;
+    color: #FFF;
+}
+.blue_button:after {
+    content: '';
+    width: 5px;
+    height: 5px;
+    border-top: 3px solid #333333;
+    border-right: 3px solid #333333;
+    transform: rotate(45deg) translateY(-50%);
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    border-radius: 1px;
+    transition: 0.3s ease-in-out;
+}
+.blue_button:hover:after {
+    border-color: #FFF;
+}
+
+.list_name {
+    margin: 8px 0 0;
+    border: 2px solid #000000;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.list_a {
+    margin: 10px 0;
+}
+
+.list_title {
+    font-size: 22px;
+}
+
+.list_datetime {
+    font-size: 14px;
+    text-align: right;
+    padding-right: 15px;
+}
+
+/* 記録入力フォーム */
+form p label {
+    text-align: left;
+    font-size: 18px;
+}
+form p input[type=text], textarea  {
+    width: 100%;
+    font-size: 20px;
+    box-sizing: border-box;
+}
+
+.delete_text {
+    font-size: 24px;
+    font-weight: 700;
+    margin: 15px 0;
+    text-align: center;
+}
+
+.detail_text {
+    font-size: 18px;
+    margin-bottom: 10px;
 }

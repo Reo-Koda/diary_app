@@ -3,9 +3,11 @@
 
 <ul>
     {% for page in page_list %}
-        <li>
-            <a href="{% url 'diary:page_detail' page.id %}">{{ page.title }}</a>
-            <p>更新日時:{{ page.updated_at }}/作成日時:{{ page.created_at }}</p>
+        <li class="list_name">
+            <div class="list_a">
+                <a href="{% url 'diary:page_detail' page.id %}" class="list_title">{{ page.title }}</a>
+            </div>
+            <p class="list_datetime">更新日時:{{ page.updated_at }}/作成日時:{{ page.created_at }}</p>
         </li>
     {% empty %}
         <div>記録が見つかりませんでした</div>

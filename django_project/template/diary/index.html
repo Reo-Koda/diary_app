@@ -1,15 +1,27 @@
 {% extends "base/diary_base.html" %}
 {% block body %}
 
-<div id="clock"></div>
+<div id="clock" class="clock_text"></div>
 <br>
-<a href="{% url 'diary:page_create' %}">記録を作成する</a>
-<br>
-<a href="{% url 'diary:page_list' %}">記録一覧</a>
+
+<div class="icon_field">
+    <div class="icon_box">
+        <a href="{% url 'diary:page_create' %}">
+            <img class="index_icon" src="../../static/diary/svg/memo_icon.svg" alt="メモアイコン">
+            <p class="icon_text">記録を作成する</p>
+        </a>
+    </div>
+    <div class="icon_box">
+        <a href="{% url 'diary:page_list' %}">
+            <img class="index_icon" src="../../static/diary/svg/shelf_icon.svg" alt="棚">
+            <p class="icon_text">記録一覧</p>
+        </a>
+    </div>
+</div>
 <br>
 <form action="{% url 'accounts:logout' %}" method="post">
     {% csrf_token %}
-    <button type="submit">ログアウト</button>
+    <button type="submit" class="blue_button">Logout</button>
 </form>
 
 {% endblock %}

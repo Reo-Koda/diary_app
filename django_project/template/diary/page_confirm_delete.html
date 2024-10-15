@@ -3,8 +3,8 @@
 
 <form method="POST">
     {% csrf_token %}
-    <p>この記録を削除しますか？</p>
-    <button type="submit">削除</button>
+    <p class="delete_text">この記録を削除しますか？</p>
+    <button type="submit" class="blue_button">Delete</button>
 </form>
 
 <h2>{{ page.title }}</h2>
