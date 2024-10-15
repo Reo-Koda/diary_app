@@ -1,7 +1,7 @@
 from django.shortcuts import render, redirect, get_object_or_404
 from django.contrib.auth.mixins import LoginRequiredMixin
 from django.views import View
-from .forms import PageForm
+from .forms import PageForm, SignUpForm
 from .models import Page
 from datetime import datetime
 from zoneinfo import ZoneInfo
@@ -58,6 +58,20 @@ class PageDeleteView(LoginRequiredMixin, View):
         page = get_object_or_404(Page, id=id)
         page.delete()
         return redirect("diary:page_list")
+    
+class SignUpView(View):
+    def get(self, request):
+        form = SignUpForm()
+        return render(request, "diary/signup.html", {"form": form})
+    
+    def post(self, request):
+        form = SignUpForm()
+        if form.is_valid():
+            form.save()
+            return redirect("diary:index")
+        return render(request, "diary/signup.html", {"form": form})
+
+
 
 
 
@@ -67,3 +81,4 @@ page_list = PageListView.as_view()
 page_detail = PageDetailView.as_view()
 page_update = PageUpdateView.as_view()
 page_delete = PageDeleteView.as_view()
+signup = SignUpView.as_view()

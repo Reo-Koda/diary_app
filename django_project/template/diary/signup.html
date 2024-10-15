@@ -1,0 +1,11 @@
+{% extends "base/diary_base.html" %}
+{% block body %}
+
+<h2>新規ユーザー登録</h2>
+<form method="POST">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit" class="blue_button">Signup</button>
+</form>
+
+{% endblock %}
