@@ -4,7 +4,7 @@ abbr, address, cite, code,
 del, dfn, em, img, ins, kbd, q, samp,
 small, strong, sub, sup, var,
 b, i,
-dl, dt, dd, ol, ul,
+dl, dt, dd, ol,
 fieldset, form, label, legend,
 table, caption, tbody, tfoot, thead, tr, th, td,
 article, aside, canvas, details, figcaption, figure,
@@ -138,6 +138,16 @@ a {
   color: #000;
 }
 
+ul {
+  margin: 20px 0;
+  padding:0;
+  border:0;
+  outline:0;
+  font-size:100%;
+  vertical-align:baseline;
+  background:transparent;
+}
+
 li {
   margin:0;
   padding:0;
@@ -226,6 +236,7 @@ li {
   border: 2px solid #000000;
   border-radius: 10px;
   text-align: center;
+  list-style:none;
 }
 
 .list_a {
@@ -247,19 +258,17 @@ form p label {
   text-align: left;
   font-size: 18px;
 }
-form p input[type=text], input[type=password], textarea  {
+form p input[type=text], input[type=password], input[type=email], textarea {
   width: 100%;
   font-size: 20px;
   box-sizing: border-box;
 }
-form p input[type=text], input[type=password]  {
+form p input[type=text], input[type=password], input[type=email] {
   text-align: center;
 }
-form ul li {
-  font-size: 15.5px;
+form p span {
+  line-height: 2rem;
   font-weight: 600;
-  margin-bottom: 14px;
-  text-align: center;
 }
 
 .delete_text {
