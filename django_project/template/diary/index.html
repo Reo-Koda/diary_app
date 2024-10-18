@@ -26,37 +26,42 @@
 <br>
 
 <div class="index_footer_field">
-    <h6>Information</h6>
-    <ul>
-        <li>
-            <div>
-                <a href="{% url 'diary:user' %}">ユーザー情報</a>
-            </div>
-        </li>
-        <li>
-            <div>
-                <a href="{% url 'diary:user' %}">このサイトについて</a>
-            </div>
-        </li>
-        <li>
-            <div>
-                <a href="{% url 'diary:user' %}">WithRice 公式ホームページ</a>
-            </div>
-        </li>
-        <li>
-            <div>
-                <a href="https://docs.google.com/forms/d/e/1FAIpQLScOtOov-aVKNO1JGM7AjKriHgrNc1D6_dA-4hReq31xcGA3UQ/viewform?embedded=true" target="_blank" rel="noopener noreferrer">お問い合わせ</a>
-                <!-- <iframe src="https://docs.google.com/forms/d/e/1FAIpQLScOtOov-aVKNO1JGM7AjKriHgrNc1D6_dA-4hReq31xcGA3UQ/viewform?embedded=true" width="640" height="684" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe> -->
-            </div>
-        </li>
-        <li>
-            <div>
-                <a href="https://github.com/Reo-Koda/diary_app" target="_blank" rel="noopener noreferrer">Github</a>
-            </div>
-        </li>
-    </ul>
+    <div class="foot_information">
+        <h6>Information</h6>
+        <ul>
+            <li>
+                <div>
+                    <a href="{% url 'diary:user' %}">ユーザー情報</a>
+                </div>
+            </li>
+            <li>
+                <div>
+                    <a href="{% url 'diary:user' %}">このサイトについて</a>
+                </div>
+            </li>
+            <li>
+                <div>
+                    <a href="{% url 'diary:user' %}">WithRice 公式ホームページ</a>
+                </div>
+            </li>
+            <li>
+                <div>
+                    <a href="https://docs.google.com/forms/d/e/1FAIpQLScOtOov-aVKNO1JGM7AjKriHgrNc1D6_dA-4hReq31xcGA3UQ/viewform?embedded=true" target="_blank" rel="noopener noreferrer">お問い合わせ</a>
+                    <!-- <iframe src="https://docs.google.com/forms/d/e/1FAIpQLScOtOov-aVKNO1JGM7AjKriHgrNc1D6_dA-4hReq31xcGA3UQ/viewform?embedded=true" width="640" height="684" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe> -->
+                </div>
+            </li>
+            <li>
+                <div>
+                    <a href="https://github.com/Reo-Koda/diary_app" target="_blank" rel="noopener noreferrer">Github</a>
+                </div>
+            </li>
+        </ul>
+    </div>
+    <div class="withrice_icon_field">
+        <img class="withrice_icon2" src="../../static/diary/svg/youtube_profile_image.png" alt="withrice icon" />
+    </div>
 </div>
 <p class="right_sentence">© Basic Inc. All Rights Reserved.</p>
-<img class="withrice_icon" src="../../static/diary/svg/twitter_header_photo_2.png" alt="withrice icon" />
+<!-- <img class="withrice_icon" src="../../static/diary/svg/twitter_header_photo_2.png" alt="withrice icon" /> -->
 
 {% endblock %}

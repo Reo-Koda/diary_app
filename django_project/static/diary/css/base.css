@@ -201,19 +201,37 @@ li {
 .index_footer_field {
   margin: 20px 0 0;
   border-top: 2px solid #000;
-  padding-left: 20px;
+  display: flex;
 }
 
 .index_footer_field ul li {
   line-height: 1.5rem;
 }
 
+.foot_information {
+  padding-left: 40px;
+  width: 40%;
+}
+
 .right_sentence {
+  text-align: center;
+  /* line-height: 1.5rem;
+  background-color: #000;
+  color: #ffffff;
+  border-radius: 3px; */
+}
+
+.withrice_icon_field {
+  width: 60%;
   text-align: center;
 }
 
 .withrice_icon {
   width: 100%;
+}
+
+.withrice_icon2 {
+  height: 188px;
 }
 
 /* ログイン・ログアウトボタン */
