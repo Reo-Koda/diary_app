@@ -7,6 +7,7 @@
             <div class="list_a">
                 <a href="{% url 'diary:page_detail' page.id %}" class="list_title">{{ page.title }}</a>
             </div>
+            <p class="list_datetime">作成者: {{ page.author.username }}</p>
             <p class="list_datetime">更新日時:{{ page.updated_at }}/作成日時:{{ page.created_at }}</p>
         </li>
     {% empty %}
