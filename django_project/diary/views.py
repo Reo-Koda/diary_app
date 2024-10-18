@@ -58,6 +58,10 @@ class PageDeleteView(LoginRequiredMixin, View):
         page = get_object_or_404(Page, id=id)
         page.delete()
         return redirect("diary:page_list")
+    
+class UserDetailView(LoginRequiredMixin, View):
+    def get(self, request):
+        return render(request, "diary/user.html")
 
 
 
@@ -67,3 +71,4 @@ page_list = PageListView.as_view()
 page_detail = PageDetailView.as_view()
 page_update = PageUpdateView.as_view()
 page_delete = PageDeleteView.as_view()
+user = UserDetailView.as_view()

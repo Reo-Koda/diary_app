@@ -1,10 +1,9 @@
 html, div, span, object, iframe,
-h3, h4, h5, h6, blockquote, pre,
+h3, h4, h5, blockquote, pre,
 abbr, address, cite, code,
 del, dfn, em, img, ins, kbd, q, samp,
 small, strong, sub, sup, var,
-b, i,
-dl, dt, dd, ol,
+b, i, dl, dt, dd, ol,
 fieldset, form, label, legend,
 table, caption, tbody, tfoot, thead, tr, th, td,
 article, aside, canvas, details, figcaption, figure,
@@ -118,6 +117,16 @@ h2 {
   border-bottom: 2px solid #000000;
 }
 
+h6 {
+  margin: 0.5rem 0 0;
+  padding:0;
+  border:0;
+  outline:0;
+  font-size: 20px;
+  vertical-align:baseline;
+  background:transparent;
+}
+
 p {
   margin: 2px 0 0;
   padding:0;
@@ -174,7 +183,7 @@ li {
 
 .icon_box {
   width: 150px;
-  border: 4px solid #000000;
+  border: 4px solid #000;
   border-radius: 15px;
   text-align: center;
 }
@@ -187,6 +196,24 @@ li {
 .icon_text {
   font-size: 18px;
   font-weight: 500;
+}
+
+.index_footer_field {
+  margin: 20px 0 0;
+  border-top: 2px solid #000;
+  padding-left: 20px;
+}
+
+.index_footer_field ul li {
+  line-height: 1.5rem;
+}
+
+.right_sentence {
+  text-align: center;
+}
+
+.withrice_icon {
+  width: 100%;
 }
 
 /* ログイン・ログアウトボタン */
