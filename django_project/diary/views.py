@@ -1,3 +1,5 @@
+import os
+from django.conf import settings
 from django.shortcuts import render, redirect, get_object_or_404
 from django.contrib.auth.mixins import LoginRequiredMixin
 from django.views import View
@@ -45,8 +47,15 @@ class PageUpdateView(LoginRequiredMixin, View):
     
     def post(self, request, id):
         page = get_object_or_404(Page, id=id, author=request.user)
+        old_picture = page.picture
         form = PageForm(request.POST, request.FILES, instance=page)
         if form.is_valid():
+            if 'picture' in request.FILES:
+                # 古い画像がある場合は削除
+                if old_picture and old_picture.name != request.FILES['picture'].name:
+                    old_picture_path = os.path.join(settings.MEDIA_ROOT, old_picture.name)
+                    if os.path.exists(old_picture_path):
+                        os.remove(old_picture_path)
             form.save()
             return redirect("diary:page_detail", id=id)
         return render(request, "diary/page_form.html", {"form": form})

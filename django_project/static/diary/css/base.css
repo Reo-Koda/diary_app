@@ -327,3 +327,8 @@ form p span {
   font-size: 18px;
   margin-bottom: 10px;
 }
+
+.detail_picture {
+  max-width: 100%;
+  border-radius: 10px;
+}
