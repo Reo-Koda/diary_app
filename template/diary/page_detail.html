@@ -1,0 +1,16 @@
+{% extends "base/diary_base.html" %}
+{% block body %}
+
+<h2>{{ page.title }}</h2>
+<div class="detail_text">{{ page.body | linebreaksbr }}</div>
+{% if page.picture %}
+    <img class="detail_picture" src="{{ page.picture.url }}" alt="画像を表示できません"/>
+{% endif %}
+<div class="list_datetime">作成者: {{ page.author.username }}</div>
+<div class="list_datetime">更新日時:{{ page.updated_at }}/作成日時:{{ page.created_at }}</div>
+{% if page.author == request.user %}
+<a href="{% url 'diary:page_update' page.id %}" class="blue_button">Modify</a>
+<a href="{% url 'diary:page_delete' page.id %}" class="blue_button">Delete</a>
+{% endif %}
+
+{% endblock %}

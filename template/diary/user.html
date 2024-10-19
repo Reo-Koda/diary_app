@@ -1,0 +1,13 @@
+{% extends "base/diary_base.html" %}
+{% block body %}
+
+<h2>ユーザー情報</h2>
+<p>ユーザー名: {{ user.username }}</p>
+<p>メールアドレス: {{ user.email }}</p>
+
+<form action="{% url 'accounts:logout' %}" method="post">
+    {% csrf_token %}
+    <button type="submit" class="blue_button">Logout</button>
+</form>
+
+{% endblock %}
