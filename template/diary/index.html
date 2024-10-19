@@ -1,4 +1,5 @@
 {% extends "base/diary_base.html" %}
+{% load static %}
 {% block body %}
 
 <div id="clock" class="clock_text"></div>
@@ -7,13 +8,13 @@
 <div class="icon_field">
     <div class="icon_box">
         <a href="{% url 'diary:page_create' %}">
-            <img class="index_icon" src="../../static/diary/svg/memo_icon.svg" alt="メモアイコン">
+            <img class="index_icon" src="{% static 'diary/svg/memo_icon.svg' %}" alt="メモアイコン">
             <p class="icon_text">記録を作成する</p>
         </a>
     </div>
     <div class="icon_box">
         <a href="{% url 'diary:page_list' %}">
-            <img class="index_icon" src="../../static/diary/svg/shelf_icon.svg" alt="棚">
+            <img class="index_icon" src="{% static 'diary/svg/shelf_icon.svg' %}" alt="棚">
             <p class="icon_text">記録一覧</p>
         </a>
     </div>
@@ -58,7 +59,7 @@
         </ul>
     </div>
     <div class="withrice_icon_field">
-        <img class="withrice_icon2" src="../../static/diary/svg/youtube_profile_image.png" alt="withrice icon" />
+        <img class="withrice_icon2" src="{% static 'diary/svg/youtube_profile_image.png' %}" alt="withrice icon" />
     </div>
 </div>
 <p class="right_sentence">© Basic Inc. All Rights Reserved.</p>
