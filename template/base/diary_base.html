@@ -4,8 +4,8 @@
         <meta charset="utf-8" />
         <title>WithRice 活動記録</title>
         {% load static %}
-        <link rel="stylesheet" href="{% static 'diary/css/base.css' %}">
-        <script src="{% static 'diary/js/base.js' %}"></script>
+        <link rel="stylesheet" href="{% staticfiles 'diary/css/base.css' %}">
+        <script src="{% staticfiles 'diary/js/base.js' %}"></script>
     </head>
     <body>
         <h1><a href="{% url 'diary:index' %}">WithRice 活動記録</a></h1>
