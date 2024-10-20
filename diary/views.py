@@ -26,7 +26,7 @@ class PageCreateView(LoginRequiredMixin, View):
 
 class PageListView(LoginRequiredMixin, View):
     def get(self, request):
-        page_list = Page.objects.order_by("-created_at")
+        page_list = Page.objects.order_by("-updated_at")
         return render(request, "diary/page_list.html", {"page_list": page_list})
 
 class PageDetailView(LoginRequiredMixin, View):
