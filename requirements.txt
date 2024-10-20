@@ -4,6 +4,7 @@ cachetools==5.3.3
 certifi==2024.6.2
 cffi==1.16.0
 charset-normalizer==3.3.2
+dj-database-url==2.2.0
 Django==5.1.2
 google-api-core==2.19.0
 google-api-python-client==2.131.0
@@ -21,6 +22,7 @@ packaging==24.1
 pillow==10.4.0
 proto-plus==1.23.0
 protobuf==4.25.3
+psycopg2-binary==2.9.10
 pyasn1==0.6.0
 pyasn1_modules==0.4.0
 pycparser==2.22
