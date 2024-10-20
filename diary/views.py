@@ -5,15 +5,10 @@ from django.contrib.auth.mixins import LoginRequiredMixin
 from django.views import View
 from .forms import PageForm
 from .models import Page
-from datetime import datetime
-from zoneinfo import ZoneInfo
 
 class IndexView(LoginRequiredMixin, View):
     def get(self, request):
-        datetime_now = datetime.now(
-            ZoneInfo("Asia/Tokyo")
-        ).strftime("%Y年%m月%d日 %H:%M:%S")
-        return render(request, "diary/index.html", {"datetime_now": datetime_now})
+        return render(request, "diary/index.html")
 
 class PageCreateView(LoginRequiredMixin, View):
     def get(self, request):
